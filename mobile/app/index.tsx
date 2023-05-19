@@ -11,10 +11,10 @@ import { styled } from 'nativewind'
 import { useEffect } from 'react'
 import { ImageBackground, Text, TouchableOpacity, View } from 'react-native'
 
-import blurBg from './src/assets/bg-blur.png'
-import NLWLogo from './src/assets/nlw-spacetime-logo.svg'
-import Stripes from './src/assets/stripe.svg'
-import { api } from './src/lib/api/api'
+import blurBg from '../src/assets/bg-blur.png'
+import NLWLogo from '../src/assets/nlw-spacetime-logo.svg'
+import Stripes from '../src/assets/stripe.svg'
+import { api } from '../src/lib/api/api'
 
 const StyledStripes = styled(Stripes)
 
