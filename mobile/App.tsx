@@ -32,7 +32,7 @@ export default function App() {
     BaiJamjuree_700Bold,
   })
 
-  const [request, response, signWithGithub] = useAuthRequest(
+  const [, response, signWithGithub] = useAuthRequest(
     {
       clientId: '9fe8b962b9a94443fab4',
       scopes: ['identity'],
