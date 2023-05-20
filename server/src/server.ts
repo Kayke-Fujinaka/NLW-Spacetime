@@ -7,6 +7,7 @@ import fastify from 'fastify'
 
 import { authRoutes } from './routes/auth'
 import { memoriesRoutes } from './routes/memories'
+import { uploadRoutes } from './routes/upload'
 
 const app = fastify()
 
@@ -24,6 +25,7 @@ app.register(multipart)
 
 app.register(authRoutes)
 app.register(memoriesRoutes)
+app.register(uploadRoutes)
 
 app
   .listen({
