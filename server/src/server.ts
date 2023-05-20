@@ -2,6 +2,7 @@ import 'dotenv/config'
 
 import cors from '@fastify/cors'
 import jwt from '@fastify/jwt'
+import multipart from '@fastify/multipart'
 import fastify from 'fastify'
 
 import { authRoutes } from './routes/auth'
@@ -18,6 +19,8 @@ app.register(cors, {
 app.register(jwt, {
   secret: 'spacetime',
 })
+
+app.register(multipart)
 
 app.register(authRoutes)
 app.register(memoriesRoutes)
