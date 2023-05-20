@@ -3,7 +3,9 @@ import 'dotenv/config'
 import cors from '@fastify/cors'
 import jwt from '@fastify/jwt'
 import multipart from '@fastify/multipart'
+import fastifyStatic from '@fastify/static'
 import fastify from 'fastify'
+import { resolve } from 'node:path'
 
 import { authRoutes } from './routes/auth'
 import { memoriesRoutes } from './routes/memories'
@@ -19,6 +21,11 @@ app.register(cors, {
 
 app.register(jwt, {
   secret: 'spacetime',
+})
+
+app.register(fastifyStatic, {
+  root: resolve(__dirname, '../uploads'),
+  prefix: '/uploads',
 })
 
 app.register(multipart)
